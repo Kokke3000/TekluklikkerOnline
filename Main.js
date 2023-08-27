@@ -65,16 +65,19 @@ ClicksThisSecond = 0;
 function checkAndSetCookieValues(floatCookies) {
     for (const variableName in floatCookies) {
         if (floatCookies.hasOwnProperty(variableName)) {
-        const cookieName = floatCookies[variableName];
-        const cookieValue = getCookie(cookieName);
+            const cookieName = floatCookies[variableName];
+            const cookieValue = getCookie(cookieName);
 
-        if (cookieValue !== null) {
-                window[variableName] = parseFloat(cookieValue);
-        }
+            if (cookieValue !== "") { // Check for an empty string
+                if (isNaN(cookieValue)) {
+                    // Handle the case where the cookie value is NaN
+                } else {
+                    window[variableName] = parseFloat(cookieValue);
+                }
+            }
         }
     }
 }
-
 
 // List of variables to check
 const floatCookies = {
