@@ -62,7 +62,7 @@ ChatGPTBought = 0;
 ClicksThisSecond = 0;
 
 //Check if the cookies have been set
-function checkAndSetCookieValues(variableCookieMap) {
+function checkAndSetCookieValues(floatCookies) {
     for (const variableName in floatCookies) {
         if (floatCookies.hasOwnProperty(variableName)) {
         const cookieName = floatCookies[variableName];
@@ -70,7 +70,6 @@ function checkAndSetCookieValues(variableCookieMap) {
 
         if (cookieValue !== null) {
                 window[variableName] = parseFloat(cookieValue);
-
         }
         }
     }
