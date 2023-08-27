@@ -98,6 +98,8 @@ const floatCookies = {
     NspireBought : "NspireBought"
 };
 
+checkAndSetCookieValues(floatCookies);
+
 
 //Set buttons to red if stuff is bought
 
