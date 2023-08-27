@@ -38,7 +38,7 @@ ChatGPTPrice = 1000000;
 //Item prices
 MelatoninPrice = 100;
 GoldenEsPrice = 1000;
-ESprice = 100;
+Kahviprice = 100;
 PullaPrice = 300;
 
 //Stats
@@ -53,7 +53,7 @@ MoneyMultiplier = 1;
 
 //Misc
 rotation = 0;
-ESMultiplier = 1;
+KahviMultiplier = 1;
 MelatoninMultiplier = 1;
 MAOLBought = 0;
 GoldenESUnlocked = 0;
@@ -127,13 +127,12 @@ const element = document.getElementById("LogoImg");
 element.addEventListener("contextmenu", (event) => event.preventDefault());
 Logo.style.height = LogoSize + 'px';
 Logo.style.width = LogoSize + 'px';   
-document.getElementById("GoldenEsContainer").style.display = "none";
 
 //Function ran when a player clicks (Includes crit chance)
 function Painettu() {
     if (CriticalClickChance > Math.random() * 101) {
         ClicksThisSecond += 1;
-        Money += MoneyPerClick * MoneyMultiplier * ESMultiplier * 5;
+        Money += MoneyPerClick * MoneyMultiplier * KahviMultiplier * 5;
         rotation += 10 + MoneyPerClick * 2;
         document.getElementById('critical').style.display = "block";
         document.getElementById('critical').style.setProperty("top", 10 + Math.random()* 10 + "%");
@@ -144,7 +143,7 @@ function Painettu() {
         }, 1000);
     } else {
             ClicksThisSecond += 1;
-            Money += MoneyPerClick * MoneyMultiplier * ESMultiplier;
+            Money += MoneyPerClick * MoneyMultiplier * KahviMultiplier;
             rotation += 10 + MoneyPerClick;
             TotalClicks += 1;  
 
@@ -235,42 +234,18 @@ function BuyChatGPT() {
 
 
 
-function BuyES() {
-    if (Money >= ESprice) {
-        Money -= ESprice
-        ESMultiplier = 2;
-        document.getElementById("Status").innerHTML = "ES pärinät: 2x opintopistettä per klikkaus! (10 sec)";
+function BuyKahvi() {
+    if (Money >= Kahviprice) {
+        Money -= Kahviprice
+        KahviMultiplier = 2;
+        document.getElementById("Status").innerHTML = "Kofeiinia! 2x opintopisteet per klikkaus";
         setTimeout(() => {  
-            ESMultiplier = 1;
+            KahviMultiplier = 1;
             document.getElementById("Status").innerHTML = " ";
         }, 10000);
     }
 }
 
-
-function UnlockGoldenEs() {
-    if (Money >= UnlockGoldenEsPrice && GoldenESUnlocked == 0) {
-        Money -= UnlockGoldenEsPrice;
-        GoldenESUnlocked = 1;
-        document.getElementById("UnlockGoldenEsButton").disabled = true;
-        document.getElementById("UnlockGoldenEsButton").style.backgroundColor = "red";
-        document.getElementById("GoldenEsContainer").style.display = "inline";
-        document.getElementById("UnlockGoldenEsButton").innerHTML = "Kultainen ES on jo avattu";
-    }
-   
-}
-
-function BuyGoldenEs() {
-    if (Money >= GoldenEsPrice) {
-        Money -= GoldenEsPrice;
-        ESMultiplier = 4;
-        document.getElementById("Status").innerHTML = "Mega ES pärinät: 4x opintopistettä per klikkaus! (10sec)";
-        setTimeout(() => {  
-            ESMultiplier = 1;
-            document.getElementById("Status").innerHTML = " ";
-        }, 10000);
-    }
-}
 
 function BuyPulla() {
     if (Money >= PullaPrice) {
@@ -322,12 +297,10 @@ setInterval(function () {
     document.getElementById("CritPrice").innerHTML = "+1% Critical chance hinta: " + CriticalClickPrice;
     document.getElementById("MAOLPrice").innerHTML = "MAOL hinta: " + MAOLPrice;
     document.getElementById("NspirePrice").innerHTML = "TI-nspire hinta: " + NspirePrice;
-    document.getElementById("ESPrice").innerHTML = "ES hinta: " + ESprice;
+    document.getElementById("KahviPrice").innerHTML = "Kahvi hinta: " + Kahviprice;
     document.getElementById("PullaPrice").innerHTML = "Amispulla hinta: " + PullaPrice;
-    document.getElementById("GoldenEsPrice").innerHTML = "Kultainen ES hinta: " + GoldenEsPrice;
     document.getElementById("MPrice").innerHTML = "Melatoniini hinta: " + MelatoninPrice;
     document.getElementById("ChatGPTPrice").innerHTML = "ChatGPT hinta: " + ChatGPTPrice;
-    document.getElementById("UnlockGoldenEsPrice").innerHTML = "Kultaisen ES:n avaushinta: " + UnlockGoldenEsPrice;
 }, 100);
 
 //Save player's data to cookies
@@ -358,7 +331,7 @@ setInterval(function () {
 //Just a quick and dirty way to check if the player has cheated in money and punish them for it
 function CheckMoney() {
     const lastMoney = Money;
-    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * ESMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier)) * 2;
+    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * KahviMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier)) * 2;
     ClicksThisSecond = 0;
     
     setTimeout(function() {

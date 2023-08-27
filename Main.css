@@ -107,14 +107,9 @@ body {
     transform: translateY(4px);
 }
 
-#ESImg {
-    width: 50px;
-    height: 100px;
-}
-
-#GoldenEsImg {
-    width: 50px;
-    height: 100px;
+#KahviImg {
+    width: 75px;
+    height: 75px;
 }
 
 #PullaImg {
