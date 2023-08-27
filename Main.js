@@ -69,7 +69,7 @@ function checkAndSetCookieValues(variableCookieMap) {
         const cookieValue = getCookie(cookieName);
 
         if (cookieValue !== null) {
-            if(cookieValue.isNan()) {
+            if(isNan(cookieValue)) {
 
             } else {
                 window[variableName] = parseFloat(cookieValue);
@@ -104,7 +104,7 @@ const floatCookies = {
 
 //Run the check
 checkAndSetCookieValues(floatCookies);
-SatartSaving();
+StartSaving();
 
 //Set buttons to red if stuff is bought
 
@@ -336,7 +336,7 @@ setInterval(function () {
 }, 100);
 
 //Save player's data to cookies
-function SatartSaving() {
+function StartSaving() {
     setInterval(function () {
         //Stats  
         setCookie("Money", Money, 365);
