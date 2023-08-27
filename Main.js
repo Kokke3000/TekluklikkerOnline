@@ -1,1 +1,370 @@
-const _0x5e27f6=_0x5875;function setCookie($,x,e){let t=_0x5875,i=new Date;i[t(511)](i[t(496)]()+864e5*e);let n=t(531)+i[t(489)]();document[t(487)]=$+"="+x+";"+n+t(525)}function getCookie($){let x=_0x5875,e=$+"=",t=decodeURIComponent(document[x(487)])[x(476)](";");for(let i=0;i<t[x(488)];i++){let n=t[i];for(;" "==n[x(519)](0);)n=n[x(545)](1);if(0==n[x(497)](e))return n.substring(e[x(488)],n[x(488)])}return""}function _0x40ca(){let $=["Nukuit pommiin melatoniinin takia! Menetit 10% opintopisteist\xe4si!","left","PullaPrice","CritPrice","substring","+1% Critical chance hinta: ","Hyv\xe4t y\xf6 unet: 2x opintopisteit\xe4 per sekuntti! (30 sec)","ChatGPTBought","backgroundColor","70DiQtyk"," +1 opintopiste per klikkaus hinta: ","block","NspireButton","round","disabled","GoldenEsContainer","Melatoniini hinta: ","Amispulla hinta: ","MoneyPerClick","contextmenu","MAOLButton","MMPrice","8HJEnQt","TI-nspire on jo ostettu!","red","ChatGPT hinta: ","J\xe4it kiinni lunttaamisesta! Menetit kaikki opintopisteesi.","width","Money","Status","219452fPMQix","split","getElementById","296193BoJqMk","MoneyMultiplier","+0.1 Opintopiste kerroin hinta: ","ChatGPTPrice","5650484GPzYor","MPrice","MoneyPerSecond","ESPrice","MAOLBought","cookie","length","toUTCString","opintopisteit\xe4 per sekuntti: ","height","opintopisteit\xe4: ","LogoImg","Kultainen ES hinta: ","ES hinta: ","getTime","indexOf","TotalClicks","MoneyPerSecondPrice","hasOwnProperty","Nice try!","29763CKxakP","setProperty","style","MAOL on jo ostettu!","CriticalClickPrice","+1 opintopiste per sekuntti hinta: ","TI-nspire hinta: ","6005780IBkRYa","display","setTime","UnlockGoldenEsButton","preventDefault","Counter","Mega ES p\xe4rin\xe4t: 4x opintopistett\xe4 per klikkaus! (10sec)","top","ChatGPTButton","4CdboZl","charAt","ChatGPT on jo ostettu!","NspireBought","ES p\xe4rin\xe4t: 2x opintopistett\xe4 per klikkaus! (10 sec)","innerHTML","critical",";path=/","addEventListener","MoneyMultiplierPrice","MoneyPerClickPrice","MAOLPrice","Kultaisen ES:n avaushinta: ","expires=","4341306fzFYTh","3073671sIejaj","MPCPrice","rotate","random","none","Klikkauksia: ","CriticalClickChance","GoldenEsPrice"];return(_0x40ca=function(){return $})()}function checkAndSetCookieValues($){let x=_0x5875;for(let e in floatCookies)if(floatCookies[x(500)](e)){let t=floatCookies[e],i=getCookie(t);null!==i&&(window[e]=parseFloat(i))}}!function($,x){let e=_0x5875,t=$();for(;;)try{let i=parseInt(e(502))/1+parseInt(e(518))/2*(parseInt(e(478))/3)+-parseInt(e(475))/4*(-parseInt(e(550))/5)+-parseInt(e(532))/6+-parseInt(e(482))/7+-parseInt(e(563))/8*(-parseInt(e(533))/9)+parseInt(e(509))/10;if(406641===i)break;t.push(t.shift())}catch(n){t.push(t.shift())}}(_0x40ca,406641),MoneyPerClickPrice=10,CriticalClickPrice=100,MoneyPerSecondPrice=100,MoneyMultiplierPrice=100,MAOLPrice=1e4,NspirePrice=5e4,UnlockGoldenEsPrice=1e4,ChatGPTPrice=1e6,MelatoninPrice=100,GoldenEsPrice=1e3,ESprice=100,PullaPrice=300,Money=0,CriticalClickChance=1,MoneyPerClick=1,LogoSize=150,TotalClicks=0,MoneyPerSecond=0,MoneyMultiplier=1,rotation=0,ESMultiplier=1,MelatoninMultiplier=1,MAOLBought=0,GoldenESUnlocked=0,NspireBought=0,ChatGPTBought=0,ClicksThisSecond=0;const floatCookies={Money:_0x5e27f6(473),CriticalClickChance:_0x5e27f6(539),MoneyPerClick:_0x5e27f6(559),TotalClicks:_0x5e27f6(498),MoneyPerSecond:_0x5e27f6(484),MoneyMultiplier:_0x5e27f6(479),MoneyPerClickPrice:"MoneyPerClickPrice",MoneyPerSecondPrice:"MoneyPerClickPrice",MoneyMultiplierPrice:_0x5e27f6(527),CriticalClickPrice:_0x5e27f6(506),MAOLBought:_0x5e27f6(486),ChatGPTBought:_0x5e27f6(548),NspireBought:_0x5e27f6(521)};checkAndSetCookieValues(floatCookies),1==ChatGPTBought&&(document.getElementById(_0x5e27f6(517))[_0x5e27f6(555)]=!0,document.getElementById(_0x5e27f6(517))[_0x5e27f6(504)][_0x5e27f6(549)]=_0x5e27f6(565),document[_0x5e27f6(477)](_0x5e27f6(517))[_0x5e27f6(523)]="ChatGPT on jo ostettu!"),1==MAOLBought&&(document[_0x5e27f6(477)](_0x5e27f6(561)).disabled=!0,document[_0x5e27f6(477)](_0x5e27f6(561))[_0x5e27f6(504)][_0x5e27f6(549)]=_0x5e27f6(565),document.getElementById(_0x5e27f6(561))[_0x5e27f6(523)]=_0x5e27f6(505)),1==NspireBought&&(document.getElementById(_0x5e27f6(553))[_0x5e27f6(555)]=!0,document[_0x5e27f6(477)]("NspireButton")[_0x5e27f6(504)].backgroundColor=_0x5e27f6(565),document.getElementById(_0x5e27f6(553)).innerHTML=_0x5e27f6(564));var Logo=document[_0x5e27f6(477)](_0x5e27f6(493));const element=document[_0x5e27f6(477)](_0x5e27f6(493));function Painettu(){let $=_0x5e27f6;CriticalClickChance>101*Math[$(536)]()?(ClicksThisSecond+=1,Money+=MoneyPerClick*MoneyMultiplier*ESMultiplier*5,rotation+=10+2*MoneyPerClick,document.getElementById($(524))[$(504)][$(510)]=$(552),document[$(477)]($(524)).style[$(503)]($(516),10+10*Math[$(536)]()+"%"),document.getElementById("critical")[$(504)][$(503)]($(542),45+10*Math[$(536)]()+"%"),TotalClicks+=1,setTimeout(()=>{let x=$;document[x(477)]("critical")[x(504)][x(510)]=x(537)},1e3)):(ClicksThisSecond+=1,Money+=MoneyPerClick*MoneyMultiplier*ESMultiplier,rotation+=10+MoneyPerClick,TotalClicks+=1)}function _0x5875($,x){let e=_0x40ca();return(_0x5875=function($,x){return e[$-=470]})($,x)}function BuyMoneyPerClick(){Money>=MoneyPerClickPrice&&(Money-=MoneyPerClickPrice,MoneyPerClick+=1,MoneyPerClickPrice+=10*MoneyPerClick)}function BuyCritChance(){Money>=CriticalClickPrice&&(Money-=CriticalClickPrice,CriticalClickChance+=1,CriticalClickPrice+=10*CriticalClickChance)}function BuyMPS(){Money>=MoneyPerSecondPrice&&(Money-=MoneyPerSecondPrice,MoneyPerSecondPrice+=20*MoneyPerSecond,MoneyPerSecond+=1)}function BuyMultiplier(){Money>=MoneyMultiplierPrice&&(Money-=MoneyMultiplierPrice,MoneyMultiplierPrice+=100*MoneyMultiplier,MoneyMultiplier+=.1)}function BuyMAOL(){let $=_0x5e27f6;Money>=MAOLPrice&&0==MAOLBought&&(Money-=MAOLPrice,MoneyPerSecond+=10,MAOLBought=1,document[$(477)]("MAOLButton")[$(555)]=!0,document[$(477)]($(561)).style[$(549)]="red",document[$(477)]($(561))[$(523)]="MAOL on jo ostettu!")}function BuyNspire(){let $=_0x5e27f6;Money>=NspirePrice&&0==NspireBought&&(Money-=NspirePrice,MoneyMultiplier+=5,NspireBought=1,document[$(477)]($(553))[$(555)]=!0,document[$(477)]($(553)).style[$(549)]=$(565),document.getElementById("NspireButton")[$(523)]="TI-nspire on jo ostettu!")}function BuyChatGPT(){let $=_0x5e27f6;Money>=ChatGPTPrice&&0==ChatGPTBought&&(Money-=ChatGPTPrice,MoneyPerClick+=100,ChatGPTBought=1,document[$(477)]("ChatGPTButton").disabled=!0,document.getElementById($(517))[$(504)][$(549)]=$(565),document[$(477)]($(517)).innerHTML=$(520))}function BuyES(){let $=_0x5e27f6;Money>=ESprice&&(Money-=ESprice,ESMultiplier=2,document[$(477)]($(474))[$(523)]=$(522),setTimeout(()=>{ESMultiplier=1,document.getElementById($(474)).innerHTML=" "},1e4))}function UnlockGoldenEs(){let $=_0x5e27f6;Money>=UnlockGoldenEsPrice&&0==GoldenESUnlocked&&(Money-=UnlockGoldenEsPrice,GoldenESUnlocked=1,document[$(477)]($(512))[$(555)]=!0,document[$(477)]($(512)).style.backgroundColor="red",document[$(477)]($(556))[$(504)][$(510)]="inline",document[$(477)]($(512)).innerHTML="Kultainen ES on jo avattu")}function BuyGoldenEs(){let $=_0x5e27f6;Money>=GoldenEsPrice&&(Money-=GoldenEsPrice,ESMultiplier=4,document[$(477)]($(474))[$(523)]=$(515),setTimeout(()=>{let x=$;ESMultiplier=1,document[x(477)](x(474))[x(523)]=" "},1e4))}function BuyPulla(){let $=_0x5e27f6;Money>=PullaPrice&&(Money-=PullaPrice,MoneyMultiplier+=1,document[$(477)]($(474))[$(523)]="Mmm... Hyv\xe4\xe4 amispullaa! Opintopiste kerroin +1 (30 sec)",setTimeout(()=>{let x=$;MoneyMultiplier-=1,document[x(477)]("Status")[x(523)]=" "},3e4))}function BuyADHD(){let $=_0x5e27f6;Money>=MelatoninPrice&&(10*Math[$(536)]()!=1?(Money-=MelatoninPrice,MelatoninMultiplier=2,document.getElementById($(474)).innerHTML=$(547),setTimeout(()=>{let x=$;MelatoninMultiplier=1,document.getElementById(x(474))[x(523)]=" "},3e4)):(Money-=.1*Money,document[$(477)]($(474))[$(523)]=$(541),setTimeout(()=>{let x=$;document[x(477)](x(474))[x(523)]=" "},2e3)))}function CheckMoney(){let $=Money,x=($+MoneyPerClick*MoneyMultiplier*ESMultiplier*(ClicksThisSecond+1)*5+MoneyPerSecond*MoneyMultiplier)*2;ClicksThisSecond=0,setTimeout(function(){let $=_0x5875;Money>x&&(console.log($(501)),alert($(471)),Money=0)},1e3)}element[_0x5e27f6(526)](_0x5e27f6(560),$=>$[_0x5e27f6(513)]()),Logo[_0x5e27f6(504)][_0x5e27f6(491)]=LogoSize+"px",Logo[_0x5e27f6(504)][_0x5e27f6(472)]=LogoSize+"px",document.getElementById(_0x5e27f6(556))[_0x5e27f6(504)].display="none",setInterval(function(){Money+=MoneyPerSecond*MoneyMultiplier*MelatoninMultiplier,rotation+=MoneyPerSecond*MoneyMultiplier*MelatoninMultiplier},1e3),setInterval(function(){let $=_0x5e27f6;document[$(477)]($(514))[$(523)]=$(492)+Math.round(100*Money)/100,Logo[$(504)][$(535)]=rotation+"deg",document[$(477)]("MoneyPerClick").innerHTML="opintopisteit\xe4 per klikkaus: "+MoneyPerClick,document[$(477)]($(539)).innerHTML="Critical click mahdollisuus: "+CriticalClickChance+"%",document[$(477)]($(484))[$(523)]=$(490)+MoneyPerSecond,document[$(477)]($(534))[$(523)]=$(551)+MoneyPerClickPrice,document[$(477)]("MPSPrice")[$(523)]=$(507)+MoneyPerSecondPrice,document[$(477)]("TotalClicks")[$(523)]=$(538)+TotalClicks,document[$(477)]($(479)).innerHTML="Opintopiste kerroin: "+Math[$(554)](100*MoneyMultiplier)/100+" x",document[$(477)]($(562))[$(523)]=$(480)+MoneyMultiplierPrice,document[$(477)]($(544))[$(523)]=$(546)+CriticalClickPrice,document.getElementById($(529)).innerHTML="MAOL hinta: "+MAOLPrice,document[$(477)]("NspirePrice")[$(523)]=$(508)+NspirePrice,document[$(477)]($(485)).innerHTML=$(495)+ESprice,document.getElementById($(543))[$(523)]=$(558)+PullaPrice,document[$(477)]($(540))[$(523)]=$(494)+GoldenEsPrice,document[$(477)]($(483))[$(523)]=$(557)+MelatoninPrice,document[$(477)]($(481))[$(523)]=$(470)+ChatGPTPrice,document[$(477)]("UnlockGoldenEsPrice").innerHTML=$(530)+UnlockGoldenEsPrice},100),setInterval(function(){let $=_0x5e27f6;setCookie("Money",Money,365),setCookie($(498),TotalClicks,365),setCookie($(559),MoneyPerClick,365),setCookie($(484),MoneyPerSecond,365),setCookie($(479),MoneyMultiplier,365),setCookie($(539),CriticalClickChance,365),setCookie($(528),MoneyPerClickPrice,365),setCookie($(499),MoneyPerSecondPrice,365),setCookie("MoneyMultiplierPrice",MoneyMultiplierPrice,365),setCookie($(506),CriticalClickPrice,365),setCookie($(486),MAOLBought,365),setCookie($(521),NspireBought,365),setCookie($(548),ChatGPTBought,365),CheckMoney()},1e3);
+//Setting a cookie with name, value and expiry
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+//Reading a specific cookie by name
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+}
+
+
+
+//Upgrade prices
+MoneyPerClickPrice = 10;
+CriticalClickPrice = 100;
+MoneyPerSecondPrice = 100;
+MoneyMultiplierPrice = 100;
+MAOLPrice = 10000;
+NspirePrice = 50000;
+UnlockGoldenEsPrice = 10000;
+ChatGPTPrice = 1000000;
+
+//Item prices
+MelatoninPrice = 100;
+GoldenEsPrice = 1000;
+ESprice = 100;
+PullaPrice = 300;
+
+//Stats
+Money = 0;
+CriticalClickChance = 1;
+MoneyPerClick = 1;
+LogoSize = 150  ;
+TotalClicks = 0;
+MoneyPerSecond = 0;
+MoneyMultiplier = 1;
+
+
+//Misc
+rotation = 0;
+ESMultiplier = 1;
+MelatoninMultiplier = 1;
+MAOLBought = 0;
+GoldenESUnlocked = 0;
+NspireBought = 0;
+ChatGPTBought = 0;
+ClicksThisSecond = 0;
+
+//Check if the cookies have been set
+function checkAndSetCookieValues(variableCookieMap) {
+    for (const variableName in floatCookies) {
+        if (floatCookies.hasOwnProperty(variableName)) {
+        const cookieName = floatCookies[variableName];
+        const cookieValue = getCookie(cookieName);
+
+        if (cookieValue !== null && cookieValue !== NaN) {
+            window[variableName] = parseFloat(cookieValue);
+        }
+        }
+    }
+}
+
+
+// List of variables to check
+const floatCookies = {
+    //Stats
+    Money : "Money",
+    CriticalClickChance : "CriticalClickChance",
+    MoneyPerClick : "MoneyPerClick",
+    TotalClicks : "TotalClicks",
+    MoneyPerSecond : "MoneyPerSecond",
+    MoneyMultiplier : "MoneyMultiplier",
+
+    //Upgrade prices
+    MoneyPerClickPrice : "MoneyPerClickPrice",
+    MoneyPerSecondPrice : "MoneyPerClickPrice",
+    MoneyMultiplierPrice : "MoneyMultiplierPrice",
+    CriticalClickPrice : "CriticalClickPrice",
+
+    MAOLBought : "MAOLBought",
+    ChatGPTBought : "ChatGPTBought",
+    NspireBought : "NspireBought"
+};
+
+
+//Run the check
+checkAndSetCookieValues(floatCookies);
+
+//Set buttons to red if stuff is bought
+
+if (ChatGPTBought == 1) {
+    document.getElementById("ChatGPTButton").disabled = true;
+    document.getElementById("ChatGPTButton").style.backgroundColor = "red";
+    document.getElementById("ChatGPTButton").innerHTML = "ChatGPT on jo ostettu!";
+}
+
+if (MAOLBought == 1) {
+    document.getElementById("MAOLButton").disabled = true;
+    document.getElementById("MAOLButton").style.backgroundColor = "red";
+    document.getElementById("MAOLButton").innerHTML = "MAOL on jo ostettu!";
+}
+
+if (NspireBought == 1) {
+    document.getElementById("NspireButton").disabled = true;
+    document.getElementById("NspireButton").style.backgroundColor = "red";
+    document.getElementById("NspireButton").innerHTML = "TI-nspire on jo ostettu!";
+}
+
+//Set the Logo variable and make it not respond to right clicks
+var Logo = document.getElementById('LogoImg');
+const element = document.getElementById("LogoImg"); 
+element.addEventListener("contextmenu", (event) => event.preventDefault());
+Logo.style.height = LogoSize + 'px';
+Logo.style.width = LogoSize + 'px';   
+document.getElementById("GoldenEsContainer").style.display = "none";
+
+//Function ran when a player clicks (Includes crit chance)
+function Painettu() {
+    if (CriticalClickChance > Math.random() * 101) {
+        ClicksThisSecond += 1;
+        Money += MoneyPerClick * MoneyMultiplier * ESMultiplier * 5;
+        rotation += 10 + MoneyPerClick * 2;
+        document.getElementById('critical').style.display = "block";
+        document.getElementById('critical').style.setProperty("top", 10 + Math.random()* 10 + "%");
+        document.getElementById('critical').style.setProperty("left", 45 + Math.random()* 10 + "%");
+        TotalClicks += 1;  
+        setTimeout(() => {  
+            document.getElementById("critical").style.display = "none";
+        }, 1000);
+    } else {
+            ClicksThisSecond += 1;
+            Money += MoneyPerClick * MoneyMultiplier * ESMultiplier;
+            rotation += 10 + MoneyPerClick;
+            TotalClicks += 1;  
+
+    }
+}
+
+//Function ran every seccond to give the player money
+setInterval(function () {
+    Money += MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier;
+    rotation += MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier;
+}, 1000);
+
+
+// Here lie all the damn functions for buying stuff by pressing buttons
+
+function BuyMoneyPerClick() {
+    if (Money >= MoneyPerClickPrice) {
+        Money -= MoneyPerClickPrice;
+        MoneyPerClick += 1;
+        MoneyPerClickPrice += 10 * MoneyPerClick;
+    }
+    
+}
+
+function BuyCritChance() {
+    if (Money >= CriticalClickPrice) {
+        Money -= CriticalClickPrice;
+        CriticalClickChance += 1;
+        CriticalClickPrice += 10 * CriticalClickChance;
+    }
+    
+}
+
+function BuyMPS() {
+    if (Money >= MoneyPerSecondPrice) {
+        Money -= MoneyPerSecondPrice;
+        MoneyPerSecondPrice += MoneyPerSecond * 20;
+        MoneyPerSecond += 1;
+        
+    }
+   
+}
+
+function BuyMultiplier() {
+    if (Money >= MoneyMultiplierPrice) {
+        Money -= MoneyMultiplierPrice;
+        MoneyMultiplierPrice += 100 * MoneyMultiplier;
+        MoneyMultiplier += 0.1;    
+    }
+   
+}
+
+function BuyMAOL() {
+    if (Money >= MAOLPrice && MAOLBought == 0) {
+        Money -= MAOLPrice;
+        MoneyPerSecond += 10;
+        MAOLBought = 1;
+        document.getElementById("MAOLButton").disabled = true;
+        document.getElementById("MAOLButton").style.backgroundColor = "red";
+        document.getElementById("MAOLButton").innerHTML = "MAOL on jo ostettu!";
+    }
+   
+}
+
+function BuyNspire() {
+    if (Money >= NspirePrice && NspireBought == 0) {
+        Money -= NspirePrice;
+        MoneyMultiplier += 5;
+        NspireBought = 1;
+        document.getElementById("NspireButton").disabled = true;
+        document.getElementById("NspireButton").style.backgroundColor = "red";
+        document.getElementById("NspireButton").innerHTML = "TI-nspire on jo ostettu!";
+    }
+   
+}
+
+function BuyChatGPT() {
+    if (Money >= ChatGPTPrice && ChatGPTBought == 0) {
+        Money -= ChatGPTPrice;
+        MoneyPerClick += 100;
+        ChatGPTBought = 1;
+        document.getElementById("ChatGPTButton").disabled = true;
+        document.getElementById("ChatGPTButton").style.backgroundColor = "red";
+        document.getElementById("ChatGPTButton").innerHTML = "ChatGPT on jo ostettu!";
+    }
+   
+}
+
+
+
+function BuyES() {
+    if (Money >= ESprice) {
+        Money -= ESprice
+        ESMultiplier = 2;
+        document.getElementById("Status").innerHTML = "ES pärinät: 2x opintopistettä per klikkaus! (10 sec)";
+        setTimeout(() => {  
+            ESMultiplier = 1;
+            document.getElementById("Status").innerHTML = " ";
+        }, 10000);
+    }
+}
+
+
+function UnlockGoldenEs() {
+    if (Money >= UnlockGoldenEsPrice && GoldenESUnlocked == 0) {
+        Money -= UnlockGoldenEsPrice;
+        GoldenESUnlocked = 1;
+        document.getElementById("UnlockGoldenEsButton").disabled = true;
+        document.getElementById("UnlockGoldenEsButton").style.backgroundColor = "red";
+        document.getElementById("GoldenEsContainer").style.display = "inline";
+        document.getElementById("UnlockGoldenEsButton").innerHTML = "Kultainen ES on jo avattu";
+    }
+   
+}
+
+function BuyGoldenEs() {
+    if (Money >= GoldenEsPrice) {
+        Money -= GoldenEsPrice;
+        ESMultiplier = 4;
+        document.getElementById("Status").innerHTML = "Mega ES pärinät: 4x opintopistettä per klikkaus! (10sec)";
+        setTimeout(() => {  
+            ESMultiplier = 1;
+            document.getElementById("Status").innerHTML = " ";
+        }, 10000);
+    }
+}
+
+function BuyPulla() {
+    if (Money >= PullaPrice) {
+        Money -= PullaPrice;
+        MoneyMultiplier += 1;
+        document.getElementById("Status").innerHTML = "Mmm... Hyvää amispullaa! Opintopiste kerroin +1 (30 sec)";
+        setTimeout(() => {  
+            MoneyMultiplier -=1
+            document.getElementById("Status").innerHTML = " ";
+        }, 30000);
+    }
+}
+
+
+function BuyADHD() {
+    if (Money >= MelatoninPrice) {
+        if (Math.random() * 10 != 1) {
+        Money -= MelatoninPrice
+        MelatoninMultiplier = 2;
+        document.getElementById("Status").innerHTML = "Hyvät yö unet: 2x opintopisteitä per sekuntti! (30 sec)";
+        setTimeout(() => {  
+            MelatoninMultiplier = 1;
+            document.getElementById("Status").innerHTML = " ";
+        }, 30000);
+        } else {
+            Money -= (Money * 0.10);
+            document.getElementById("Status").innerHTML = "Nukuit pommiin melatoniinin takia! Menetit 10% opintopisteistäsi!";
+            setTimeout(() => {  
+            document.getElementById("Status").innerHTML = " ";
+            }, 2000);
+        }
+    }
+}
+// === End of Group A ===
+
+
+//Here lies the function to load all the variables into their html elements
+setInterval(function () {
+    document.getElementById("Counter").innerHTML = "opintopisteitä: " + (Math.round(Money * 100) / 100);
+    Logo.style.rotate = rotation + 'deg';
+    document.getElementById("MoneyPerClick").innerHTML = "opintopisteitä per klikkaus: " + MoneyPerClick;
+    document.getElementById("CriticalClickChance").innerHTML = "Critical click mahdollisuus: " + CriticalClickChance + "%";
+    document.getElementById("MoneyPerSecond").innerHTML = "opintopisteitä per sekuntti: " + MoneyPerSecond;
+    document.getElementById("MPCPrice").innerHTML = " +1 opintopiste per klikkaus hinta: " + MoneyPerClickPrice;
+    document.getElementById("MPSPrice").innerHTML = "+1 opintopiste per sekuntti hinta: " + MoneyPerSecondPrice;
+    document.getElementById("TotalClicks").innerHTML = "Klikkauksia: " + TotalClicks;
+    document.getElementById("MoneyMultiplier").innerHTML = "Opintopiste kerroin: " + (Math.round(MoneyMultiplier * 100) / 100) + " x";
+    document.getElementById("MMPrice").innerHTML = "+0.1 Opintopiste kerroin hinta: " + MoneyMultiplierPrice;
+    document.getElementById("CritPrice").innerHTML = "+1% Critical chance hinta: " + CriticalClickPrice;
+    document.getElementById("MAOLPrice").innerHTML = "MAOL hinta: " + MAOLPrice;
+    document.getElementById("NspirePrice").innerHTML = "TI-nspire hinta: " + NspirePrice;
+    document.getElementById("ESPrice").innerHTML = "ES hinta: " + ESprice;
+    document.getElementById("PullaPrice").innerHTML = "Amispulla hinta: " + PullaPrice;
+    document.getElementById("GoldenEsPrice").innerHTML = "Kultainen ES hinta: " + GoldenEsPrice;
+    document.getElementById("MPrice").innerHTML = "Melatoniini hinta: " + MelatoninPrice;
+    document.getElementById("ChatGPTPrice").innerHTML = "ChatGPT hinta: " + ChatGPTPrice;
+    document.getElementById("UnlockGoldenEsPrice").innerHTML = "Kultaisen ES:n avaushinta: " + UnlockGoldenEsPrice;
+}, 100);
+
+//Save player's data to cookies
+setInterval(function () {
+    //Stats  
+    setCookie("Money", Money, 365);
+    setCookie("TotalClicks", TotalClicks, 365);
+    setCookie("MoneyPerClick", MoneyPerClick, 365);
+    setCookie("MoneyPerSecond", MoneyPerSecond, 365);
+    setCookie("MoneyMultiplier", MoneyMultiplier, 365);
+    setCookie("CriticalClickChance", CriticalClickChance, 365);
+
+    //UpgradePrices (Only the one's that can be bought multiple times)
+    setCookie("MoneyPerClickPrice", MoneyPerClickPrice, 365);
+    setCookie("MoneyPerSecondPrice", MoneyPerSecondPrice, 365);
+    setCookie("MoneyMultiplierPrice", MoneyMultiplierPrice, 365);
+    setCookie("CriticalClickPrice", CriticalClickPrice, 365);
+
+    //Misc (One time upgrades, etc)
+    setCookie("MAOLBought", MAOLBought, 365);
+    setCookie("NspireBought", NspireBought, 365);
+    setCookie("ChatGPTBought", ChatGPTBought, 365);
+    CheckMoney();
+
+}, 1000);
+
+//Just a quick and dirty way to check if the player has cheated in money and punish them for it
+function CheckMoney() {
+    const lastMoney = Money;
+    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * ESMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier)) * 2;
+    ClicksThisSecond = 0;
+    
+    setTimeout(function() {
+        if (Money > possibleMoney) {
+            console.log("Nice try!");
+            alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
+            Money = 0;
+        }
+    }, 1000);
+}
