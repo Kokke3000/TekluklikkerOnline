@@ -101,7 +101,6 @@ const floatCookies = {
 
 //Run the check
 checkAndSetCookieValues(floatCookies);
-StartSaving();
 
 //Set buttons to red if stuff is bought
 
@@ -333,30 +332,29 @@ setInterval(function () {
 }, 100);
 
 //Save player's data to cookies
-function StartSaving() {
-    setInterval(function () {
-        //Stats  
-        setCookie("Money", Money, 365);
-        setCookie("TotalClicks", TotalClicks, 365);
-        setCookie("MoneyPerClick", MoneyPerClick, 365);
-        setCookie("MoneyPerSecond", MoneyPerSecond, 365);
-        setCookie("MoneyMultiplier", MoneyMultiplier, 365);
-        setCookie("CriticalClickChance", CriticalClickChance, 365);
-    
-        //UpgradePrices (Only the one's that can be bought multiple times)
-        setCookie("MoneyPerClickPrice", MoneyPerClickPrice, 365);
-        setCookie("MoneyPerSecondPrice", MoneyPerSecondPrice, 365);
-        setCookie("MoneyMultiplierPrice", MoneyMultiplierPrice, 365);
-        setCookie("CriticalClickPrice", CriticalClickPrice, 365);
-    
-        //Misc (One time upgrades, etc)
-        setCookie("MAOLBought", MAOLBought, 365);
-        setCookie("NspireBought", NspireBought, 365);
-        setCookie("ChatGPTBought", ChatGPTBought, 365);
-        CheckMoney();
-    
-    }, 1000);    
-}
+setInterval(function () {
+    //Stats  
+    setCookie("Money", Money, 365);
+    setCookie("TotalClicks", TotalClicks, 365);
+    setCookie("MoneyPerClick", MoneyPerClick, 365);
+    setCookie("MoneyPerSecond", MoneyPerSecond, 365);
+    setCookie("MoneyMultiplier", MoneyMultiplier, 365);
+    setCookie("CriticalClickChance", CriticalClickChance, 365);
+
+    //UpgradePrices (Only the one's that can be bought multiple times)
+    setCookie("MoneyPerClickPrice", MoneyPerClickPrice, 365);
+    setCookie("MoneyPerSecondPrice", MoneyPerSecondPrice, 365);
+    setCookie("MoneyMultiplierPrice", MoneyMultiplierPrice, 365);
+    setCookie("CriticalClickPrice", CriticalClickPrice, 365);
+
+    //Misc (One time upgrades, etc)
+    setCookie("MAOLBought", MAOLBought, 365);
+    setCookie("NspireBought", NspireBought, 365);
+    setCookie("ChatGPTBought", ChatGPTBought, 365);
+    CheckMoney();
+
+}, 1000);    
+
 
 //Just a quick and dirty way to check if the player has cheated in money and punish them for it
 function CheckMoney() {
