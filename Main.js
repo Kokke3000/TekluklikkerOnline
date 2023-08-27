@@ -68,8 +68,12 @@ function checkAndSetCookieValues(variableCookieMap) {
         const cookieName = floatCookies[variableName];
         const cookieValue = getCookie(cookieName);
 
-        if (cookieValue !== null && cookieValue !== NaN) {
-            window[variableName] = parseFloat(cookieValue);
+        if (cookieValue !== null) {
+            if(cookieValue.isNan()) {
+
+            } else {
+                window[variableName] = parseFloat(cookieValue);
+            }
         }
         }
     }
