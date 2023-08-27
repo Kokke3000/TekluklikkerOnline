@@ -1,0 +1,153 @@
+body {
+    height: 100vh;
+    background: radial-gradient(ellipse at bottom, #162e4e 0%, #0c0d13 100%);
+    margin: 0;
+    overflow: hidden;
+}
+
+#main {
+    font-family: 'Trebuchet MS';
+    text-align: center;
+    position: relative;
+    top: 20%;
+}
+
+#Funny {
+    margin: 2%;
+    font-size: 2vw;
+}
+
+#Troll {
+    margin: 2%;
+    display: none;
+}
+
+#stats {
+    text-align: center;
+    height: auto;
+    width: auto;
+    position: absolute;
+    border-style: solid;
+    bottom: 40%;
+    left: 1%;
+    background-color: gray;
+    color: white;   
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+#shop {
+    height: auto;
+    max-height: 400px;
+    width: auto;
+    position: absolute;
+    border-style: solid;
+    bottom: -17%;
+    left: 70%;
+    text-align: center;
+    margin: 1vw;
+    padding: 2vw;
+    background-color: gray;
+    color: white;
+    overflow-y: scroll;
+}
+
+#consumables {
+    height: auto;
+    width: 30vw;
+    position: absolute;
+    border-style: solid;
+    top: 60%;
+    right: 65vw;
+    text-align: center;
+    margin: 2vw;
+    padding: 1vw;
+    background-color: gray;
+    color: white;
+    display: flex;
+    overflow-x: auto;
+}
+
+
+#LogoImg {
+    padding: none;
+    margin: none;
+    transition: 200ms linear all;
+}
+
+#Counter {
+    color: white;
+    font-size: 20px;
+}
+
+#Title {
+    text-decoration: underline;
+    color: white;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    width: 250px;
+    height: 40px;
+    padding: 0px; 
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#ESImg {
+    width: 50px;
+    height: 100px;
+}
+
+#GoldenEsImg {
+    width: 50px;
+    height: 100px;
+}
+
+#PullaImg {
+    width: 75px;
+    height: 60spx;
+}
+
+.ShopContainer {
+    padding: 10px;
+    display: inline;
+}
+
+
+
+#ADHDImg {
+    width: 75px;
+    height: 75px;
+}
+
+#critical {
+    color: red;
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+}
+
+#Status {
+    margin: none;
+    padding: none;
+    position: absolute;
+    left: 31%;
+    bottom: 140%;
+    color: white;
+    font-size: 20px;
+}

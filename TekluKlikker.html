@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="Main.css">
+<title>Teklu Clicker</title>
+<link rel="icon" type="image/x-icon" href="Sprites/Favicon.ico">
+</head>
+
+
+<body>
+    <div id="main">
+        <h1 id="Status"></h1>
+        <h1 id="Title">Tekluklikker</h1>
+        <br>
+        <button onclick="Painettu()" id="button1">
+            <img src="Sprites/Teklu.png" id="LogoImg"></img>
+        </button>
+        <p id="critical">Critical!</p>
+        <br>
+        <p id="Counter">0</p>
+        <br>
+
+        <div id="stats">
+            <h1>Statistiikkaa</h1>
+            <p id="MoneyPerClick"></p>
+            <p id="MoneyPerSecond"></p>
+            <p id="MoneyMultiplier"></p>
+            <p id="CriticalClickChance"></p>
+            <p id="TotalClicks"></p>
+        </div>
+        
+        <div id="consumables">
+            <br>
+            <h2 id="KahvioTitle">Koulun kahvio</h2>
+
+            <div id="ESContainer">
+                <button id="BuyES" onclick="BuyES()">
+                <img src="Sprites/ES.jpg" id="ESImg"></img>
+                </button>
+                <p id="ESPrice"></p>
+            </div>
+
+            <div id="ADHDContainer" class="ShopContainer">
+                <button id="BuyADHD" onclick="BuyADHD()">
+                <img src="Sprites/ADHDLääkitys.jpg" id="ADHDImg"></img>
+                </button>
+                <p id="MPrice"></p>
+            </div>
+
+            <div id="GoldenEsContainer" class="ShopContainer">
+                <button id="BuyGoldenEs" onclick="BuyGoldenEs()">
+                <img src="Sprites/KultainenEs.jpg" id="GoldenEsImg"></img>
+                </button>
+                <p id="GoldenEsPrice"></p>
+            </div>
+
+            
+            <div id="AmisPulla.jpg" class="ShopContainer">
+                <button id="BuyPulla" onclick="BuyPulla()">
+                <img src="Sprites/AmisPulla.jpg" id="PullaImg"></img>
+                </button>
+                <p id="PullaPrice"></p>
+            </div>
+        </div>
+
+        
+        <div id="shop">
+            <h1>Päivitykset</h1>
+            <button onclick="BuyMoneyPerClick()" id="MPCB" class="button">Enemmän opintopisteitä per klikkaus</button>
+            <p id="MPCPrice"></p>
+            <br>
+            <button onclick="BuyMPS()" id="MPCB" class="button">+1 opintopistettä per sekuntti</button>
+            <p id="MPSPrice"></p>
+            <br>
+            <button onclick="BuyMultiplier()" id="MPCB" class="button">Opintopiste kerroin</button>
+            <p id="MMPrice"></p>
+            <br>
+            <button onclick="BuyCritChance()" id="MPCB" class="button">+1% Critical click chance</button>
+            <p id="CritPrice"></p>
+            <br>
+            <button onclick="UnlockGoldenEs()" id="UnlockGoldenEsButton" class="button">Avaa kultainen ES kahviossa</button>
+            <p id="UnlockGoldenEsPrice"></p>
+            <br>
+            <button onclick="BuyMAOL()" id="MAOLButton" class="button">Osta MAOL: (+10 OPS)</button>
+            <p id="MAOLPrice"></p>
+            <br>
+            <button onclick="BuyNspire()" id="NspireButton" class="button">Osta TI-nspire: (+5 Multiplier)</button>
+            <p id="NspirePrice"></p>
+            <br>
+            <button onclick="BuyChatGPT()" id="ChatGPTButton" class="button">Osta ChatGPT: (+100 OPC)</button>
+            <p id="ChatGPTPrice"></p>
+        </div>
+</body>
+
+<script src="Main.js"></script>
+</html>
