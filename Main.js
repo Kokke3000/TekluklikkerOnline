@@ -99,9 +99,6 @@ const floatCookies = {
 };
 
 
-//Run the check
-checkAndSetCookieValues(floatCookies);
-
 //Set buttons to red if stuff is bought
 
 if (ChatGPTBought == 1) {
