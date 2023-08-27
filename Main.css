@@ -37,6 +37,7 @@ body {
 }
 
 #shop {
+    touch-action: manipulation;
     height: auto;
     max-height: 400px;
     width: auto;
@@ -53,6 +54,7 @@ body {
 }
 
 #consumables {
+    touch-action: manipulation;
     height: auto;
     width: 30vw;
     position: absolute;
@@ -73,6 +75,7 @@ body {
     padding: none;
     margin: none;
     transition: 200ms linear all;
+    touch-action: manipulation;
 }
 
 #Counter {
@@ -86,6 +89,7 @@ body {
 }
 
 .button {
+    touch-action: manipulation;
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
