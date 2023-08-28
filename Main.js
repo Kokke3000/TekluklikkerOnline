@@ -436,7 +436,7 @@ setInterval(function () {
 //Just a quick and dirty way to check if the player has cheated in money and punish them for it
 function CheckMoney() {
     const lastMoney = Money;
-    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * KahviMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier)) * 2;
+    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * KahviMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier)) * 4;
     ClicksThisSecond = 0;
     
     setTimeout(function() {
