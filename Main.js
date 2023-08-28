@@ -176,7 +176,7 @@ function BuyMoneyPerClick() {
 }
 
 function BuyCritChance() {
-    if (Money >= CriticalClickPrice) {
+    if (Money >= CriticalClickPrice && CriticalClickChance < 100) {
         Money -= CriticalClickPrice;
         CriticalClickChance += 1;
         CriticalClickPrice += 10 * CriticalClickChance;
