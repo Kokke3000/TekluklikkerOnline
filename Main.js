@@ -159,9 +159,9 @@ function Painettu() {
 
 //Function ran every seccond to give the player money
 setInterval(function () {
-    Money += MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier;
+    Money += (MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier)/10;
     rotation += MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier;
-}, 1000);
+}, 100);
 
 
 // Here lie all the damn functions for buying stuff by pressing buttons
