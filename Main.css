@@ -28,8 +28,19 @@ body {
     width: auto;
     position: absolute;
     border-style: solid;
-    bottom: 40%;
+    bottom: 50%;
     left: 1%;
+    background-color: gray;
+    color: white;   
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+#Prestige {
+    position: absolute;
+    left: 71%;
+    bottom: 77%;
+    border-style: solid;
     background-color: gray;
     color: white;   
     padding: 10px;
@@ -39,11 +50,12 @@ body {
 #shop {
     touch-action: manipulation;
     height: auto;
-    max-height: 400px;
+    max-height: 250px;
+    max-width: 300px;
     width: auto;
     position: absolute;
     border-style: solid;
-    bottom: -17%;
+    bottom: -30%;
     left: 70%;
     text-align: center;
     margin: 1vw;
@@ -59,7 +71,7 @@ body {
     width: 30vw;
     position: absolute;
     border-style: solid;
-    top: 60%;
+    top: 50%;
     right: 65vw;
     text-align: center;
     margin: 2vw;
@@ -97,10 +109,16 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 10px;
     width: 250px;
     height: 40px;
     padding: 0px; 
+}
+
+#PrestigeInfo {
+    font-size: 10px;
+    margin: 0px;
+    margin-top: 5px;
 }
 
 .button:hover {background-color: #3e8e41}

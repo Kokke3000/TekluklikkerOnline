@@ -34,12 +34,13 @@ MAOLPrice = 10000;
 NspirePrice = 50000;
 UnlockGoldenEsPrice = 10000;
 ChatGPTPrice = 1000000;
+PrestigePrice = 10000000;
 
 //Item prices
-MelatoninPrice = 100;
+MelatoninPrice = 300;
 GoldenEsPrice = 1000;
-Kahviprice = 100;
-PullaPrice = 300;
+Kahviprice = 150;
+PullaPrice = 500;
 
 //Stats
 Money = 0;
@@ -49,6 +50,7 @@ LogoSize = 150  ;
 TotalClicks = 0;
 MoneyPerSecond = 0;
 MoneyMultiplier = 1;
+PrestigeLevel = 0;
 
 
 //Misc
@@ -86,12 +88,14 @@ const floatCookies = {
     TotalClicks : "TotalClicks",
     MoneyPerSecond : "MoneyPerSecond",
     MoneyMultiplier : "MoneyMultiplier",
+    PrestigeLevel : "PrestigeLevel",
 
     //Upgrade prices
     MoneyPerClickPrice : "MoneyPerClickPrice",
     MoneyPerSecondPrice : "MoneyPerClickPrice",
     MoneyMultiplierPrice : "MoneyMultiplierPrice",
     CriticalClickPrice : "CriticalClickPrice",
+    PrestigePrice : "PrestigePrice",
 
     MAOLBought : "MAOLBought",
     ChatGPTBought : "ChatGPTBought",
@@ -102,7 +106,7 @@ checkAndSetCookieValues(floatCookies);
 
 
 //Set buttons to red if stuff is bought
-
+function CheckIfBought() {
 if (ChatGPTBought == 1) {
     document.getElementById("ChatGPTButton").disabled = true;
     document.getElementById("ChatGPTButton").style.backgroundColor = "red";
@@ -120,6 +124,9 @@ if (NspireBought == 1) {
     document.getElementById("NspireButton").style.backgroundColor = "red";
     document.getElementById("NspireButton").innerHTML = "TI-nspire on jo ostettu!";
 }
+}
+
+CheckIfBought();
 
 //Set the Logo variable and make it not respond to right clicks
 var Logo = document.getElementById('LogoImg');
@@ -238,7 +245,7 @@ function BuyKahvi() {
     if (Money >= Kahviprice) {
         Money -= Kahviprice
         KahviMultiplier = 2;
-        document.getElementById("Status").innerHTML = "Kofeiinia! 2x opintopisteet per klikkaus";
+        document.getElementById("Status").innerHTML = "Kofeiinia! 2x opintopisteet per klikkaus (10 sec)";
         setTimeout(() => {  
             KahviMultiplier = 1;
             document.getElementById("Status").innerHTML = " ";
@@ -279,7 +286,52 @@ function BuyADHD() {
         }
     }
 }
-// === End of Group A ===
+
+function Prestige() {
+if(Money > PrestigePrice) {
+    PrestigeLevel += 1;
+
+    //Upgrade prices
+    MoneyPerClickPrice = 10;
+    CriticalClickPrice = 100;
+    MoneyPerSecondPrice = 100;
+    MoneyMultiplierPrice = 100;
+    MAOLPrice = 10000;
+    NspirePrice = 50000;
+    UnlockGoldenEsPrice = 10000;
+    ChatGPTPrice = 1000000;
+    PrestigePrice = PrestigePrice * 5;
+
+    //Item prices
+    MelatoninPrice = 100;
+    GoldenEsPrice = 1000;
+    Kahviprice = 100;
+    PullaPrice = 300;
+
+    //Stats
+    Money = 0;
+    CriticalClickChance = 1;
+    MoneyPerClick = 1;
+    LogoSize = 150  ;
+    TotalClicks = 0;
+    MoneyPerSecond = 0;
+    MoneyMultiplier = 1 + PrestigeLevel;
+    PrestigeLevel = 0;
+
+
+    //Misc
+    rotation = 0;
+    KahviMultiplier = 1;
+    MelatoninMultiplier = 1;
+    MAOLBought = 0;
+    GoldenESUnlocked = 0;
+    NspireBought = 0;
+    ChatGPTBought = 0;
+    ClicksThisSecond = 0;
+
+    CheckIfBought();
+    }
+}
 
 
 //Here lies the function to load all the variables into their html elements
@@ -287,6 +339,7 @@ setInterval(function () {
     document.getElementById("Counter").innerHTML = "opintopisteitä: " + (Math.round(Money * 100) / 100);
     Logo.style.rotate = rotation + 'deg';
     document.getElementById("MoneyPerClick").innerHTML = "opintopisteitä per klikkaus: " + MoneyPerClick;
+    document.getElementById("PrestigePrice").innerHTML = "Tarvittavat opintopisteet: " + PrestigePrice;
     document.getElementById("CriticalClickChance").innerHTML = "Critical click mahdollisuus: " + CriticalClickChance + "%";
     document.getElementById("MoneyPerSecond").innerHTML = "opintopisteitä per sekuntti: " + MoneyPerSecond;
     document.getElementById("MPCPrice").innerHTML = " +1 opintopiste per klikkaus hinta: " + MoneyPerClickPrice;
@@ -312,12 +365,14 @@ setInterval(function () {
     setCookie("MoneyPerSecond", MoneyPerSecond, 365);
     setCookie("MoneyMultiplier", MoneyMultiplier, 365);
     setCookie("CriticalClickChance", CriticalClickChance, 365);
+    setCookie("PrestigeLevel", PrestigeLevel, 365);
 
     //UpgradePrices (Only the one's that can be bought multiple times)
     setCookie("MoneyPerClickPrice", MoneyPerClickPrice, 365);
     setCookie("MoneyPerSecondPrice", MoneyPerSecondPrice, 365);
     setCookie("MoneyMultiplierPrice", MoneyMultiplierPrice, 365);
     setCookie("CriticalClickPrice", CriticalClickPrice, 365);
+    setCookie("PrestigePrice", PrestigePrice, 365);
 
     //Misc (One time upgrades, etc)
     setCookie("MAOLBought", MAOLBought, 365);
