@@ -333,6 +333,50 @@ if(Money > PrestigePrice) {
     }
 }
 
+function HardReset() {
+    if (document.getElementById('resetconfirm').checked) {
+        //Upgrade prices
+        MoneyPerClickPrice = 10;
+        CriticalClickPrice = 100;
+        MoneyPerSecondPrice = 100;
+        MoneyMultiplierPrice = 100;
+        MAOLPrice = 10000;
+        NspirePrice = 50000;
+        UnlockGoldenEsPrice = 10000;
+        ChatGPTPrice = 1000000;
+        PrestigePrice = 10000000;
+
+        //Item prices
+        MelatoninPrice = 300;
+        GoldenEsPrice = 1000;
+        Kahviprice = 150;
+        PullaPrice = 500;
+
+        //Stats
+        Money = 0;
+        CriticalClickChance = 1;
+        MoneyPerClick = 1;
+        LogoSize = 150  ;
+        TotalClicks = 0;
+        MoneyPerSecond = 0;
+        MoneyMultiplier = 1;
+        PrestigeLevel = 0;
+
+
+        //Misc
+        rotation = 0;
+        KahviMultiplier = 1;
+        MelatoninMultiplier = 1;
+        MAOLBought = 0;
+        GoldenESUnlocked = 0;
+        NspireBought = 0;
+        ChatGPTBought = 0;
+        ClicksThisSecond = 0;
+
+        CheckIfBought();
+    }
+}
+
 
 //Here lies the function to load all the variables into their html elements
 setInterval(function () {
@@ -354,6 +398,12 @@ setInterval(function () {
     document.getElementById("PullaPrice").innerHTML = "Amispulla hinta: " + PullaPrice;
     document.getElementById("MPrice").innerHTML = "Melatoniini hinta: " + MelatoninPrice;
     document.getElementById("ChatGPTPrice").innerHTML = "ChatGPT hinta: " + ChatGPTPrice;
+
+    if (document.getElementById("resetconfirm").checked) {
+        document.getElementById("ResetButton").style.backgroundColor = "red";
+    } else {
+        document.getElementById("ResetButton").style.backgroundColor = "darkred";
+    }
 }, 100);
 
 //Save player's data to cookies

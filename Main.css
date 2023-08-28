@@ -115,6 +115,21 @@ body {
     padding: 0px; 
 }
 
+#ResetButton {
+    touch-action: manipulation;
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    width: 250px;
+    height: 40px;
+    padding: 0px;  
+}
+
 #PrestigeInfo {
     font-size: 10px;
     margin: 0px;
