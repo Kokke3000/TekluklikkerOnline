@@ -28,7 +28,14 @@ body {
     left: 1%;
 }
 
+#PatchnotesTitle {
+    text-decoration: underline 2px solid;
+    text-decoration-color: white;
+    text-underline-offset: 5px;
+}
+
 #PatchnotesBox {
+    text-align: left;
     display: none;
     position: absolute;
     width: 50vw;

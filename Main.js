@@ -466,9 +466,10 @@ function OpenPatchnotes() {
     fetch('patchnotes.txt')
     .then(response => response.text())
     .then(patchNotes => {
-        
+        PatchNotesShow = patchNotes.replace(/\!/g, '<br><br>');
+        console.log(PatchNotesShow);
         document.getElementById("PatchnotesBox").style.display = "block";
-        document.getElementById("Patchnotes").innerHTML = patchNotes;
+        document.getElementById("Patchnotes").innerHTML = PatchNotesShow;
         PatchNotesOpen = 1;
     })
     } else {

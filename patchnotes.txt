@@ -1,1 +1,2 @@
-1.0 (Uusin): Patchnotet lisätty peliin, tästälähtien pelin versiot näytetään versionumeroin (Tämä versio toimii 1.0:na)
+1.0.1 (Uusin): Patchnotejen selkeyttä parannettu
+1.0: Patchnotet lisätty peliin, tästälähtien pelin versiot näytetään versionumeroin (Tämä versio toimii 1.0:na) !
