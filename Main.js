@@ -57,6 +57,9 @@ PrestigeLevel = 0;
 rotation = 0;
 KahviMultiplier = 1;
 MelatoninMultiplier = 1;
+PullaBought = 0;
+PullaMultiplier = 1;
+MelatoniiniBought = 0;
 MAOLBought = 0;
 GoldenESUnlocked = 0;
 NspireBought = 0;
@@ -159,8 +162,8 @@ function Painettu() {
 
 //Function ran every seccond to give the player money
 setInterval(function () {
-    Money += (MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier)/10;
-    rotation += MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier;
+    Money += (MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier * PullaMultiplier)/10;
+    rotation += MoneyPerSecond * MoneyMultiplier * MelatoninMultiplier * PullaMultiplier;
 }, 100);
 
 
@@ -255,12 +258,14 @@ function BuyKahvi() {
 
 
 function BuyPulla() {
-    if (Money >= PullaPrice) {
+    if (Money >= PullaPrice && PullaBought == 0) {
         Money -= PullaPrice;
-        MoneyMultiplier += 1;
+        PullaMultiplier += 1;
+        PullaBought = 1;
         document.getElementById("Status").innerHTML = "Mmm... Hyvää amispullaa! Opintopiste kerroin +1 (30 sec)";
         setTimeout(() => {  
-            MoneyMultiplier -=1
+            PullaBought = 0;
+            PullaMultiplier -= 1
             document.getElementById("Status").innerHTML = " ";
         }, 30000);
     }
@@ -268,12 +273,14 @@ function BuyPulla() {
 
 
 function BuyADHD() {
-    if (Money >= MelatoninPrice) {
+    if (Money >= MelatoninPrice && MelatoniiniBought == 0) {
         if (Math.random() * 10 != 1) {
+        MelatoniiniBought = 1;
         Money -= MelatoninPrice
         MelatoninMultiplier = 2;
         document.getElementById("Status").innerHTML = "Hyvät yö unet: 2x opintopisteitä per sekuntti! (30 sec)";
         setTimeout(() => {  
+            MelatoniiniBought = 0;
             MelatoninMultiplier = 1;
             document.getElementById("Status").innerHTML = " ";
         }, 30000);
@@ -323,6 +330,9 @@ if(Money > PrestigePrice) {
     rotation = 0;
     KahviMultiplier = 1;
     MelatoninMultiplier = 1;
+    MelatoniiniBought = 0;
+    PullaMultiplier = 1;
+    PullaBought = 0;
     MAOLBought = 0;
     GoldenESUnlocked = 0;
     NspireBought = 0;
@@ -436,7 +446,7 @@ setInterval(function () {
 //Just a quick and dirty way to check if the player has cheated in money and punish them for it
 function CheckMoney() {
     const lastMoney = Money;
-    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * KahviMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier)) * 4;
+    const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * KahviMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier * PullaMultiplier)) * 4;
     ClicksThisSecond = 0;
     
     setTimeout(function() {
