@@ -22,6 +22,41 @@ body {
     display: none;
 }
 
+#PatchnotesContainer {
+    position: absolute;
+    bottom: 130%;
+    left: 1%;
+}
+
+#PatchnotesBox {
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: auto;
+    max-height: 50vh;
+    overflow-y: auto;
+    left: 200%;
+    top: 50%;
+    background-color: black;
+    color: white;
+    z-index: 5;
+} 
+
+#OpenPatchnotes {
+    touch-action: manipulation;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    width: 150px;
+    height: 30px;
+    padding: 0px; 
+}
+
 #stats {
     text-align: center;
     height: auto;
@@ -34,6 +69,7 @@ body {
     color: white;   
     padding: 10px;
     padding-bottom: 20px;
+    font-size: 13px;
 }
 
 #Prestige {
@@ -144,6 +180,13 @@ body {
     transform: translateY(4px);
 }
 
+#OpenPatchnotes:hover {background-color: #3e8e41}
+
+#OpenPatchnotes:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 #KahviImg {
     width: 75px;
     height: 75px;

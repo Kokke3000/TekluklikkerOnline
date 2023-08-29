@@ -65,6 +65,7 @@ GoldenESUnlocked = 0;
 NspireBought = 0;
 ChatGPTBought = 0;
 ClicksThisSecond = 0;
+PatchNotesOpen = 0;
 
 //Check if the cookies have been set
 function checkAndSetCookieValues(floatCookies) {
@@ -458,4 +459,20 @@ function CheckMoney() {
         }
     }
     }, 1000);
+}
+
+function OpenPatchnotes() {
+    if(PatchNotesOpen == 0) {
+    fetch('patchnotes.txt')
+    .then(response => response.text())
+    .then(patchNotes => {
+        
+        document.getElementById("PatchnotesBox").style.display = "block";
+        document.getElementById("Patchnotes").innerHTML = patchNotes;
+        PatchNotesOpen = 1;
+    })
+    } else {
+        PatchNotesOpen = 0;
+        document.getElementById("PatchnotesBox").style.display = "none";
+    }
 }
