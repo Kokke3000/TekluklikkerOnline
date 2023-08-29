@@ -409,6 +409,7 @@ setInterval(function () {
     document.getElementById("PullaPrice").innerHTML = "Amispulla hinta: " + PullaPrice;
     document.getElementById("MPrice").innerHTML = "Melatoniini hinta: " + MelatoninPrice;
     document.getElementById("ChatGPTPrice").innerHTML = "ChatGPT hinta: " + ChatGPTPrice;
+    document.getElementById("PrestigeLevel").innerHTML = "Prestige taso: " + PrestigeLevel;
 
     if (document.getElementById("resetconfirm").checked) {
         document.getElementById("ResetButton").style.backgroundColor = "red";
@@ -467,7 +468,6 @@ function OpenPatchnotes() {
     .then(response => response.text())
     .then(patchNotes => {
         PatchNotesShow = patchNotes.replace(/\!/g, '<br><br>');
-        console.log(PatchNotesShow);
         document.getElementById("PatchnotesBox").style.display = "block";
         document.getElementById("Patchnotes").innerHTML = PatchNotesShow;
         PatchNotesOpen = 1;

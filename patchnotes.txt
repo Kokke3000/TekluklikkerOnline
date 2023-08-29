@@ -1,2 +1,3 @@
-1.0.1 (Uusin): Patchnotejen selkeyttä parannettu !
-1.0: Patchnotet lisätty peliin, tästälähtien pelin versiot näytetään versionumeroin (Tämä versio toimii 1.0:na) !
+1.0.2: Prestige level on nyt nähtävissä prestigeen tarvittavien opintopisteiden alla. !
+1.0.1: Patchnotejen selkeyttä parannettu. !
+1.0: Patchnotet lisätty peliin, tästälähtien pelin versiot näytetään versionumeroin (Tämä versio toimii 1.0:na). !
