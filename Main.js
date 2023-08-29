@@ -450,10 +450,12 @@ function CheckMoney() {
     ClicksThisSecond = 0;
     
     setTimeout(function() {
+        if (possibleMoney > 0) {
         if (Money > possibleMoney) {
             console.log("Nice try!");
             alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
             Money = 0;
         }
+    }
     }, 1000);
 }
