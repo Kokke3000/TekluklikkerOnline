@@ -96,7 +96,7 @@ const floatCookies = {
 
     //Upgrade prices
     MoneyPerClickPrice : "MoneyPerClickPrice",
-    MoneyPerSecondPrice : "MoneyPerClickPrice",
+    MoneyPerSecondPrice : "MoneyPerSecondPrice",
     MoneyMultiplierPrice : "MoneyMultiplierPrice",
     CriticalClickPrice : "CriticalClickPrice",
     PrestigePrice : "PrestigePrice",
