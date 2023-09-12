@@ -464,7 +464,7 @@ function CheckMoney() {
 
 //Simple function to test for auto-clickers via click speed
 function CheckClicks() {
-    if (ClicksThisSecond > 20) {
+    if (ClicksThisSecond >= 20) {
         console.log("Nice try! (CheckClick)");
         alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
         Money = 0;
@@ -476,7 +476,8 @@ function CheckClicks() {
 function AntiAutoClick() {
     LastClicksPerSeconds.shift();
     LastClicksPerSeconds.push(ClicksThisSecond);
-    if (LastClicksPerSeconds.filter(v => v === LastClicksPerSeconds[9]).length >= 6 && LastClicksPerSeconds[9] != 0) {
+    console.log(LastClicksPerSeconds);
+    if (LastClicksPerSeconds.filter(v => v === LastClicksPerSeconds[9]).length >= 9 && LastClicksPerSeconds[9] != 0) {
         console.log("Nice try! (AntiAutoClick)");
         alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
         Money = 0;
