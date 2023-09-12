@@ -476,7 +476,6 @@ function CheckClicks() {
 function AntiAutoClick() {
     LastClicksPerSeconds.shift();
     LastClicksPerSeconds.push(ClicksThisSecond);
-    console.log(LastClicksPerSeconds);
     if (LastClicksPerSeconds.filter(v => v === LastClicksPerSeconds[9]).length >= 6 && LastClicksPerSeconds[9] != 0) {
         console.log("Nice try! (AntiAutoClick)");
         alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
