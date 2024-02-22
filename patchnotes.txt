@@ -1,4 +1,4 @@
-1.0.5: Visuaalisuutta ja performancea parannettu.
+1.0.5: Visuaalisuutta ja performancea parannettu. !
 1.0.4: Anti-autoclicker lisätty. Tästä kiitokset Github käyttäjä "Meemikeisari":lle !
 1.0.3: Muutama bugi korjattu, esimerkiksi "opintopisteet per sekuntti" päivityksen hinta asettuu nyt oikein !
 1.0.2: Prestige level on nyt nähtävissä prestigeen tarvittavien opintopisteiden alla. !
