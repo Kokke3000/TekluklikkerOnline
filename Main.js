@@ -65,6 +65,7 @@ GoldenESUnlocked = 0;
 NspireBought = 0;
 ChatGPTBought = 0;
 ClicksThisSecond = 0;
+LastClicksPerSeconds = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 PatchNotesOpen = 0;
 
 //Check if the cookies have been set
@@ -470,28 +471,49 @@ function savePlayerDataToCookies() {
 
     // Check for money changes
     CheckMoney();
+    AntiAutoClick();
+    CheckClicks();
 }
 
 // Save player's data to cookies initially and then at intervals
 savePlayerDataToCookies();
 setInterval(savePlayerDataToCookies, 1000);  
 
-
 //Just a quick and dirty way to check if the player has cheated in money and punish them for it
 function CheckMoney() {
     const lastMoney = Money;
     const possibleMoney = (lastMoney + MoneyPerClick * MoneyMultiplier * KahviMultiplier * (ClicksThisSecond + 1) * 5 + (MoneyPerSecond * MoneyMultiplier * PullaMultiplier)) * 4;
-    ClicksThisSecond = 0;
-    
     setTimeout(function() {
         if (possibleMoney > 0) {
         if (Money > possibleMoney) {
-            console.log("Nice try!");
+            console.log("Nice try! (CheckMoney)");
             alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
             Money = 0;
         }
     }
     }, 1000);
+}
+
+//Simple function to test for auto-clickers via click speed
+function CheckClicks() {
+    if (ClicksThisSecond >= 20) {
+        console.log("Nice try! (CheckClick)");
+        alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
+        Money = 0;
+    };
+    ClicksThisSecond = 0;
+}
+
+//POC for a more advanced check for auto-clickers
+function AntiAutoClick() {
+    LastClicksPerSeconds.shift();
+    LastClicksPerSeconds.push(ClicksThisSecond);
+    if (LastClicksPerSeconds.filter(v => v === LastClicksPerSeconds[9]).length >= 9 && LastClicksPerSeconds[9] != 0) {
+        console.log("Nice try! (AntiAutoClick)");
+        alert("Jäit kiinni lunttaamisesta! Menetit kaikki opintopisteesi.");
+        Money = 0;
+        LastClicksPerSeconds = LastClicksPerSeconds.map(v => 0);
+    }
 }
 
 function OpenPatchnotes() {
