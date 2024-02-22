@@ -234,3 +234,21 @@ body {
     color: white;
     font-size: 20px;
 }
+
+#button1 {
+    background-color: transparent;
+    border: none;
+}
+
+#BuyADHD {
+    background-color: transparent;
+    border: none;
+}
+#BuyKahvi {
+    background-color: transparent;
+    border: none;
+}
+#BuyPulla {
+    background-color: transparent;
+    border: none;
+}

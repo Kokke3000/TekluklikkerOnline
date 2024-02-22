@@ -389,60 +389,92 @@ function HardReset() {
 }
 
 
-//Here lies the function to load all the variables into their html elements
-setInterval(function () {
-    document.getElementById("Counter").innerHTML = "opintopisteitä: " + (Math.round(Money * 100) / 100);
-    Logo.style.rotate = rotation + 'deg';
-    document.getElementById("MoneyPerClick").innerHTML = "opintopisteitä per klikkaus: " + MoneyPerClick;
-    document.getElementById("PrestigePrice").innerHTML = "Tarvittavat opintopisteet: " + PrestigePrice;
-    document.getElementById("CriticalClickChance").innerHTML = "Critical click mahdollisuus: " + CriticalClickChance + "%";
-    document.getElementById("MoneyPerSecond").innerHTML = "opintopisteitä per sekuntti: " + MoneyPerSecond;
-    document.getElementById("MPCPrice").innerHTML = " +1 opintopiste per klikkaus hinta: " + MoneyPerClickPrice;
-    document.getElementById("MPSPrice").innerHTML = "+1 opintopiste per sekuntti hinta: " + MoneyPerSecondPrice;
-    document.getElementById("TotalClicks").innerHTML = "Klikkauksia: " + TotalClicks;
-    document.getElementById("MoneyMultiplier").innerHTML = "Opintopiste kerroin: " + (Math.round(MoneyMultiplier * 100) / 100) + " x";
-    document.getElementById("MMPrice").innerHTML = "+0.1 Opintopiste kerroin hinta: " + MoneyMultiplierPrice;
-    document.getElementById("CritPrice").innerHTML = "+1% Critical chance hinta: " + CriticalClickPrice;
-    document.getElementById("MAOLPrice").innerHTML = "MAOL hinta: " + MAOLPrice;
-    document.getElementById("NspirePrice").innerHTML = "TI-nspire hinta: " + NspirePrice;
-    document.getElementById("KahviPrice").innerHTML = "Kahvi hinta: " + Kahviprice;
-    document.getElementById("PullaPrice").innerHTML = "Amispulla hinta: " + PullaPrice;
-    document.getElementById("MPrice").innerHTML = "Melatoniini hinta: " + MelatoninPrice;
-    document.getElementById("ChatGPTPrice").innerHTML = "ChatGPT hinta: " + ChatGPTPrice;
-    document.getElementById("PrestigeLevel").innerHTML = "Prestige taso: " + PrestigeLevel;
+// Cache the updating items to reduce DOM lookups and usage
+const counterElement = document.getElementById("Counter");
+const logoElement = document.getElementById("LogoImg");
+const moneyPerClickElement = document.getElementById("MoneyPerClick");
+const prestigePriceElement = document.getElementById("PrestigePrice");
+const criticalClickChanceElement = document.getElementById("CriticalClickChance");
+const moneyPerSecondElement = document.getElementById("MoneyPerSecond");
+const mpcPriceElement = document.getElementById("MPCPrice");
+const mpsPriceElement = document.getElementById("MPSPrice");
+const totalClicksElement = document.getElementById("TotalClicks");
+const moneyMultiplierElement = document.getElementById("MoneyMultiplier");
+const mmPriceElement = document.getElementById("MMPrice");
+const critPriceElement = document.getElementById("CritPrice");
+const maolPriceElement = document.getElementById("MAOLPrice");
+const nspirePriceElement = document.getElementById("NspirePrice");
+const kahviPriceElement = document.getElementById("KahviPrice");
+const pullaPriceElement = document.getElementById("PullaPrice");
+const mPriceElement = document.getElementById("MPrice");
+const chatGPTPriceElement = document.getElementById("ChatGPTPrice");
+const prestigeLevelElement = document.getElementById("PrestigeLevel");
+const resetButtonElement = document.getElementById("ResetButton");
+const resetConfirmElement = document.getElementById("resetconfirm");
 
-    if (document.getElementById("resetconfirm").checked) {
-        document.getElementById("ResetButton").style.backgroundColor = "red";
-    } else {
-        document.getElementById("ResetButton").style.backgroundColor = "darkred";
-    }
+setInterval(function () {
+    // Update elements with cached references
+    counterElement.innerHTML = "opintopisteitä: " + (Math.round(Money * 100) / 100);
+    logoElement.style.rotate = rotation + 'deg';
+    moneyPerClickElement.innerHTML = "opintopisteitä per klikkaus: " + MoneyPerClick;
+    prestigePriceElement.innerHTML = "Tarvittavat opintopisteet: " + PrestigePrice;
+    criticalClickChanceElement.innerHTML = "Critical click mahdollisuus: " + CriticalClickChance + "%";
+    moneyPerSecondElement.innerHTML = "opintopisteitä per sekuntti: " + MoneyPerSecond;
+    mpcPriceElement.innerHTML = " +1 opintopiste per klikkaus hinta: " + MoneyPerClickPrice;
+    mpsPriceElement.innerHTML = "+1 opintopiste per sekuntti hinta: " + MoneyPerSecondPrice;
+    totalClicksElement.innerHTML = "Klikkauksia: " + TotalClicks;
+    moneyMultiplierElement.innerHTML = "Opintopiste kerroin: " + (Math.round(MoneyMultiplier * 100) / 100) + " x";
+    mmPriceElement.innerHTML = "+0.1 Opintopiste kerroin hinta: " + MoneyMultiplierPrice;
+    critPriceElement.innerHTML = "+1% Critical chance hinta: " + CriticalClickPrice;
+    maolPriceElement.innerHTML = "MAOL hinta: " + MAOLPrice;
+    nspirePriceElement.innerHTML = "TI-nspire hinta: " + NspirePrice;
+    kahviPriceElement.innerHTML = "Kahvi hinta: " + Kahviprice;
+    pullaPriceElement.innerHTML = "Amispulla hinta: " + PullaPrice;
+    mPriceElement.innerHTML = "Melatoniini hinta: " + MelatoninPrice;
+    chatGPTPriceElement.innerHTML = "ChatGPT hinta: " + ChatGPTPrice;
+    prestigeLevelElement.innerHTML = "Prestige taso: " + PrestigeLevel;
+
+    // Update ResetButton background color based on resetconfirm checkbox state
+    resetButtonElement.style.backgroundColor = resetConfirmElement.checked ? "red" : "darkred";
 }, 100);
 
-//Save player's data to cookies
-setInterval(function () {
-    //Stats  
-    setCookie("Money", Money, 365);
-    setCookie("TotalClicks", TotalClicks, 365);
-    setCookie("MoneyPerClick", MoneyPerClick, 365);
-    setCookie("MoneyPerSecond", MoneyPerSecond, 365);
-    setCookie("MoneyMultiplier", MoneyMultiplier, 365);
-    setCookie("CriticalClickChance", CriticalClickChance, 365);
-    setCookie("PrestigeLevel", PrestigeLevel, 365);
+function savePlayerDataToCookies() {
+    // Define an object to store the data that needs to be saved
+    const dataToSave = {
+        // Stats
+        "Money": Money,
+        "TotalClicks": TotalClicks,
+        "MoneyPerClick": MoneyPerClick,
+        "MoneyPerSecond": MoneyPerSecond,
+        "MoneyMultiplier": MoneyMultiplier,
+        "CriticalClickChance": CriticalClickChance,
+        "PrestigeLevel": PrestigeLevel,
 
-    //UpgradePrices (Only the one's that can be bought multiple times)
-    setCookie("MoneyPerClickPrice", MoneyPerClickPrice, 365);
-    setCookie("MoneyPerSecondPrice", MoneyPerSecondPrice, 365);
-    setCookie("MoneyMultiplierPrice", MoneyMultiplierPrice, 365);
-    setCookie("CriticalClickPrice", CriticalClickPrice, 365);
-    setCookie("PrestigePrice", PrestigePrice, 365);
+        // Upgrade prices
+        "MoneyPerClickPrice": MoneyPerClickPrice,
+        "MoneyPerSecondPrice": MoneyPerSecondPrice,
+        "MoneyMultiplierPrice": MoneyMultiplierPrice,
+        "CriticalClickPrice": CriticalClickPrice,
+        "PrestigePrice": PrestigePrice,
 
-    //Misc (One time upgrades, etc)
-    setCookie("MAOLBought", MAOLBought, 365);
-    setCookie("NspireBought", NspireBought, 365);
-    setCookie("ChatGPTBought", ChatGPTBought, 365);
+        // Misc
+        "MAOLBought": MAOLBought,
+        "NspireBought": NspireBought,
+        "ChatGPTBought": ChatGPTBought
+    };
+
+    // Loop through the data and set cookies
+    for (const key in dataToSave) {
+        setCookie(key, dataToSave[key], 365);
+    }
+
+    // Check for money changes
     CheckMoney();
+}
 
-}, 1000);    
+// Save player's data to cookies initially and then at intervals
+savePlayerDataToCookies();
+setInterval(savePlayerDataToCookies, 1000);  
 
 
 //Just a quick and dirty way to check if the player has cheated in money and punish them for it

@@ -1,3 +1,4 @@
+1.0.4: Visuaalisia asioita paranneltu esim. logossa ei ole enää taustaa. !
 1.0.3: Muutama bugi korjattu, esimerkiksi "opintopisteet per sekuntti" päivityksen hinta asettuu nyt oikein !
 1.0.2: Prestige level on nyt nähtävissä prestigeen tarvittavien opintopisteiden alla. !
 1.0.1: Patchnotejen selkeyttä parannettu. !
